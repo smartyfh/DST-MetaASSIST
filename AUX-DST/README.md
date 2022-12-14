@@ -31,4 +31,4 @@ Here I use Scheme S1 as the example:
 ❱❱❱ python3 train-S1.py --data_dir data/mwz2.4 --save_dir output-meta24-S1/exp --base_lr 2.5e-5 --sw_lr 1e-4 --init_weight 0.5 --n_epochs 12 --do_train
 ```
 
-<font color='red'>Note: More than 30G GPU memory will be occupied if the default hyperparameters are used. In case you don't have sufficient GPU memory, please use a smaller batch size.</font>
+**Note**: More than 30G GPU memory will be occupied if the default hyperparameters are used. In case you don't have sufficient GPU memory, please use a smaller batch size.

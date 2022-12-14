@@ -28,7 +28,7 @@ Please refer to each method for the details.
 + [STAR](https://github.com/smartyfh/DST-MetaASSIST/tree/main/STAR)
 + [SOM-DST](https://github.com/smartyfh/DST-MetaASSIST/tree/main/SOM-DST)
 
-<font color='red'>Note: In this repo, we only show how to train the primary model using the new framework MetaASSIST. If you are also interested in training the auxiliary model from scratch, please refer to [this repo](https://github.com/smartyfh/DST-ASSIST) for details.</font>
+**Note**: In this repo, we only show how to train the primary model using the new framework MetaASSIST. If you are also interested in training the auxiliary model from scratch, please refer to [this repo](https://github.com/smartyfh/DST-ASSIST) for details.
 
 
 ## Citation

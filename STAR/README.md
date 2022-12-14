@@ -48,7 +48,7 @@ or
 ❱❱❱ python3 train-S3.py --data_dir data/mwz2.4 --save_dir output-meta24-S3/exp --train_batch_size 16 --meta_batch_size 8 --enc_lr 4e-5 --dec_lr 1e-4 --wnet_lr 3e-5 --n_epochs 12 --do_train
 ```
 
-<font color='red'>Note: More than 40G GPU memory will be occupied if the default hyperparameters are used. In case you don't have sufficient GPU memory, please use a smaller batch size.</font>
+**Note**: More than 40G GPU memory will be occupied if the default hyperparameters are used. In case you don't have sufficient GPU memory, please use a smaller batch size.
 
 
 ## Links
