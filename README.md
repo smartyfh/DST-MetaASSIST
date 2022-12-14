@@ -16,6 +16,7 @@ Install [PyTorch](https://pytorch.org/get-started/locally/) and [Transformers](h
 
 And also install [higher](https://github.com/facebookresearch/higher) from source, a library providing support for higher-order optimization
 ```console
+❱❱❱ git clone git@github.com:facebookresearch/higher.git
 ❱❱❱ cd higher
 ❱❱❱ pip install .
 ```
