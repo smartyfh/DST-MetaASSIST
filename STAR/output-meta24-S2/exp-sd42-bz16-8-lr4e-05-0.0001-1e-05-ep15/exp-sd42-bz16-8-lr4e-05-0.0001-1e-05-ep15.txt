@@ -1,0 +1,265 @@
+Namespace(attn_head=4, data_dir='data/mwz2.4', dec_lr=0.0001, dec_warmup=0.1, dev_data='dev_dials_v2.json', do_train=True, dropout_prob=0.1, enc_lr=4e-05, enc_warmup=0.1, eval_epoch=1, eval_step=100000, max_seq_length=512, meta_batch_size=8, n_epochs=15, num_history=20, num_self_attention_layer=6, patience=6, pretrained_model='bert-base-uncased', random_seed=42, save_dir='output-meta24-S2/exp-sd42-bz16-8-lr4e-05-0.0001-1e-05-ep15', test_data='test_dials_v2.json', torch_version='1.11.0', train_batch_size=16, train_data='train_dials_v2.json', transformers_version='4.17.0', wnet_hidden_size=768, wnet_lr=1e-05, wnet_warmup=0.1, word_dropout=0.1)
+device: cuda
+['attraction-area', 'attraction-name', 'attraction-type', 'hotel-area', 'hotel-book day', 'hotel-book people', 'hotel-book stay', 'hotel-internet', 'hotel-name', 'hotel-parking', 'hotel-pricerange', 'hotel-stars', 'hotel-type', 'restaurant-area', 'restaurant-book day', 'restaurant-book people', 'restaurant-book time', 'restaurant-food', 'restaurant-name', 'restaurant-pricerange', 'taxi-arriveby', 'taxi-departure', 'taxi-destination', 'taxi-leaveat', 'train-arriveby', 'train-book people', 'train-day', 'train-departure', 'train-destination', 'train-leaveat']
+Data loaded!
+***** Run training *****
+ Num examples = 54984
+ Batch size = 16
+ Num steps = 51547
+AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 4e-05
+    lr: 0.0
+    maximize: False
+    weight_decay: 0.01
+
+Parameter Group 1
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 4e-05
+    lr: 0.0
+    maximize: False
+    weight_decay: 0.0
+
+Parameter Group 2
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.0001
+    lr: 0.0
+    maximize: False
+    weight_decay: 0.01
+)
+Training...
+[1/15] [0/3437] mean_loss: 98.819199 mean_meta_loss: 99.091331
+[1/15] [300/3437] mean_loss: 57.241277 mean_meta_loss: 55.847294
+[1/15] [600/3437] mean_loss: 35.902447 mean_meta_loss: 35.731451
+[1/15] [900/3437] mean_loss: 32.331112 mean_meta_loss: 32.328269
+[1/15] [1200/3437] mean_loss: 28.590997 mean_meta_loss: 27.967185
+[1/15] [1500/3437] mean_loss: 26.398348 mean_meta_loss: 25.042897
+[1/15] [1800/3437] mean_loss: 23.934472 mean_meta_loss: 23.352084
+[1/15] [2100/3437] mean_loss: 22.455778 mean_meta_loss: 21.577465
+[1/15] [2400/3437] mean_loss: 21.100423 mean_meta_loss: 19.693646
+[1/15] [2700/3437] mean_loss: 19.669861 mean_meta_loss: 18.819182
+[1/15] [3000/3437] mean_loss: 18.391352 mean_meta_loss: 17.045389
+[1/15] [3300/3437] mean_loss: 17.226326 mean_meta_loss: 15.282873
+*** Epoch=0, Last Update=0, Dev Loss=16.127925, Dev Acc=0.227285, Dev Turn Acc=0.612558, Best Loss=16.127925, Best Acc=0.227285 ***
+*** Epoch=0, Last Update=0, Tes Loss=16.243862, Tes Acc=0.219734, Tes Turn Acc=0.621471, Best Loss=16.127925, Best Acc=0.227285 ***
+[2/15] [0/3437] mean_loss: 17.544834 mean_meta_loss: 13.063459
+[2/15] [300/3437] mean_loss: 15.641505 mean_meta_loss: 14.097989
+[2/15] [600/3437] mean_loss: 15.112632 mean_meta_loss: 13.470813
+[2/15] [900/3437] mean_loss: 14.609470 mean_meta_loss: 13.094328
+[2/15] [1200/3437] mean_loss: 14.107343 mean_meta_loss: 12.570535
+[2/15] [1500/3437] mean_loss: 13.670487 mean_meta_loss: 12.160185
+[2/15] [1800/3437] mean_loss: 12.986965 mean_meta_loss: 11.646672
+[2/15] [2100/3437] mean_loss: 12.258014 mean_meta_loss: 10.933697
+[2/15] [2400/3437] mean_loss: 11.117010 mean_meta_loss: 9.853566
+[2/15] [2700/3437] mean_loss: 9.450810 mean_meta_loss: 8.151964
+[2/15] [3000/3437] mean_loss: 8.591022 mean_meta_loss: 7.422840
+[2/15] [3300/3437] mean_loss: 8.526090 mean_meta_loss: 7.436208
+*** Epoch=1, Last Update=1, Dev Loss=8.843754, Dev Acc=0.514917, Dev Turn Acc=0.787361, Best Loss=8.843754, Best Acc=0.514917 ***
+*** Epoch=1, Last Update=1, Tes Loss=9.049475, Tes Acc=0.519137, Tes Turn Acc=0.791802, Best Loss=8.843754, Best Acc=0.514917 ***
+[3/15] [0/3437] mean_loss: 7.347778 mean_meta_loss: 6.462065
+[3/15] [300/3437] mean_loss: 7.959981 mean_meta_loss: 6.968797
+[3/15] [600/3437] mean_loss: 7.570073 mean_meta_loss: 6.670209
+[3/15] [900/3437] mean_loss: 7.682296 mean_meta_loss: 6.788384
+[3/15] [1200/3437] mean_loss: 7.375697 mean_meta_loss: 6.641697
+[3/15] [1500/3437] mean_loss: 7.231939 mean_meta_loss: 6.466034
+[3/15] [1800/3437] mean_loss: 7.444391 mean_meta_loss: 6.671983
+[3/15] [2100/3437] mean_loss: 7.113336 mean_meta_loss: 6.464115
+[3/15] [2400/3437] mean_loss: 7.091027 mean_meta_loss: 6.350455
+[3/15] [2700/3437] mean_loss: 7.013316 mean_meta_loss: 6.234948
+[3/15] [3000/3437] mean_loss: 6.864134 mean_meta_loss: 6.200471
+[3/15] [3300/3437] mean_loss: 6.894637 mean_meta_loss: 6.182460
+*** Epoch=2, Last Update=2, Dev Loss=7.335604, Dev Acc=0.707486, Dev Turn Acc=0.875237, Best Loss=7.335604, Best Acc=0.707486 ***
+*** Epoch=2, Last Update=2, Tes Loss=7.475980, Tes Acc=0.690961, Tes Turn Acc=0.876086, Best Loss=7.335604, Best Acc=0.707486 ***
+[4/15] [0/3437] mean_loss: 6.655492 mean_meta_loss: 5.045479
+[4/15] [300/3437] mean_loss: 6.732023 mean_meta_loss: 6.010054
+[4/15] [600/3437] mean_loss: 6.699761 mean_meta_loss: 6.110159
+[4/15] [900/3437] mean_loss: 6.769042 mean_meta_loss: 6.093675
+[4/15] [1200/3437] mean_loss: 6.757975 mean_meta_loss: 5.999463
+[4/15] [1500/3437] mean_loss: 6.535409 mean_meta_loss: 6.031214
+[4/15] [1800/3437] mean_loss: 6.711110 mean_meta_loss: 5.985230
+[4/15] [2100/3437] mean_loss: 6.626478 mean_meta_loss: 5.942405
+[4/15] [2400/3437] mean_loss: 6.495849 mean_meta_loss: 5.972602
+[4/15] [2700/3437] mean_loss: 6.537956 mean_meta_loss: 5.948389
+[4/15] [3000/3437] mean_loss: 6.667672 mean_meta_loss: 5.929670
+[4/15] [3300/3437] mean_loss: 6.407999 mean_meta_loss: 5.873003
+*** Epoch=3, Last Update=2, Dev Loss=7.490269, Dev Acc=0.674668, Dev Turn Acc=0.862761, Best Loss=7.335604, Best Acc=0.707486 ***
+*** Epoch=3, Last Update=2, Tes Loss=7.633316, Tes Acc=0.670603, Tes Turn Acc=0.862242, Best Loss=7.335604, Best Acc=0.707486 ***
+[5/15] [0/3437] mean_loss: 7.397069 mean_meta_loss: 7.490016
+[5/15] [300/3437] mean_loss: 6.424684 mean_meta_loss: 5.830949
+[5/15] [600/3437] mean_loss: 6.372270 mean_meta_loss: 5.796113
+[5/15] [900/3437] mean_loss: 6.367087 mean_meta_loss: 5.835554
+[5/15] [1200/3437] mean_loss: 6.684289 mean_meta_loss: 6.048699
+[5/15] [1500/3437] mean_loss: 6.398563 mean_meta_loss: 5.761174
+[5/15] [1800/3437] mean_loss: 6.273996 mean_meta_loss: 5.777309
+[5/15] [2100/3437] mean_loss: 6.278266 mean_meta_loss: 5.663978
+[5/15] [2400/3437] mean_loss: 6.177632 mean_meta_loss: 5.594622
+[5/15] [2700/3437] mean_loss: 6.279058 mean_meta_loss: 5.759401
+[5/15] [3000/3437] mean_loss: 6.195280 mean_meta_loss: 5.669188
+[5/15] [3300/3437] mean_loss: 6.324238 mean_meta_loss: 5.692970
+*** Epoch=4, Last Update=4, Dev Loss=6.823827, Dev Acc=0.742067, Dev Turn Acc=0.895037, Best Loss=6.823827, Best Acc=0.742067 ***
+*** Epoch=4, Last Update=4, Tes Loss=7.001588, Tes Acc=0.731406, Tes Turn Acc=0.893865, Best Loss=6.823827, Best Acc=0.742067 ***
+[6/15] [0/3437] mean_loss: 6.656585 mean_meta_loss: 6.743007
+[6/15] [300/3437] mean_loss: 6.052292 mean_meta_loss: 5.565523
+[6/15] [600/3437] mean_loss: 6.203103 mean_meta_loss: 5.653963
+[6/15] [900/3437] mean_loss: 6.286166 mean_meta_loss: 5.826048
+[6/15] [1200/3437] mean_loss: 6.213370 mean_meta_loss: 5.714505
+[6/15] [1500/3437] mean_loss: 6.147181 mean_meta_loss: 5.644027
+[6/15] [1800/3437] mean_loss: 6.165088 mean_meta_loss: 5.607051
+[6/15] [2100/3437] mean_loss: 6.091514 mean_meta_loss: 5.575411
+[6/15] [2400/3437] mean_loss: 6.008627 mean_meta_loss: 5.468567
+[6/15] [2700/3437] mean_loss: 5.995288 mean_meta_loss: 5.451023
+[6/15] [3000/3437] mean_loss: 5.995836 mean_meta_loss: 5.527321
+[6/15] [3300/3437] mean_loss: 6.010496 mean_meta_loss: 5.517952
+*** Epoch=5, Last Update=4, Dev Loss=7.011345, Dev Acc=0.741660, Dev Turn Acc=0.892053, Best Loss=6.823827, Best Acc=0.742067 ***
+*** Epoch=5, Last Update=4, Tes Loss=7.339759, Tes Acc=0.719327, Tes Turn Acc=0.887079, Best Loss=6.823827, Best Acc=0.742067 ***
+[7/15] [0/3437] mean_loss: 4.730543 mean_meta_loss: 4.330876
+[7/15] [300/3437] mean_loss: 5.965207 mean_meta_loss: 5.509185
+[7/15] [600/3437] mean_loss: 5.942571 mean_meta_loss: 5.479233
+[7/15] [900/3437] mean_loss: 6.002446 mean_meta_loss: 5.574772
+[7/15] [1200/3437] mean_loss: 6.060354 mean_meta_loss: 5.574042
+[7/15] [1500/3437] mean_loss: 6.029925 mean_meta_loss: 5.528195
+[7/15] [1800/3437] mean_loss: 5.811884 mean_meta_loss: 5.498794
+[7/15] [2100/3437] mean_loss: 5.831731 mean_meta_loss: 5.446511
+[7/15] [2400/3437] mean_loss: 5.899703 mean_meta_loss: 5.458772
+[7/15] [2700/3437] mean_loss: 6.040672 mean_meta_loss: 5.483315
+[7/15] [3000/3437] mean_loss: 5.872268 mean_meta_loss: 5.359782
+[7/15] [3300/3437] mean_loss: 5.869987 mean_meta_loss: 5.445571
+*** Epoch=6, Last Update=6, Dev Loss=6.404643, Dev Acc=0.784920, Dev Turn Acc=0.909954, Best Loss=6.404643, Best Acc=0.784920 ***
+*** Epoch=6, Last Update=6, Tes Loss=6.714466, Tes Acc=0.733306, Tes Turn Acc=0.896716, Best Loss=6.404643, Best Acc=0.784920 ***
+[8/15] [0/3437] mean_loss: 5.774282 mean_meta_loss: 5.372138
+[8/15] [300/3437] mean_loss: 5.828805 mean_meta_loss: 5.386664
+[8/15] [600/3437] mean_loss: 5.781003 mean_meta_loss: 5.411721
+[8/15] [900/3437] mean_loss: 5.846309 mean_meta_loss: 5.419726
+[8/15] [1200/3437] mean_loss: 5.826090 mean_meta_loss: 5.377258
+[8/15] [1500/3437] mean_loss: 5.860088 mean_meta_loss: 5.409600
+[8/15] [1800/3437] mean_loss: 5.828128 mean_meta_loss: 5.324806
+[8/15] [2100/3437] mean_loss: 5.769108 mean_meta_loss: 5.361191
+[8/15] [2400/3437] mean_loss: 5.795175 mean_meta_loss: 5.367355
+[8/15] [2700/3437] mean_loss: 5.887386 mean_meta_loss: 5.364790
+[8/15] [3000/3437] mean_loss: 5.858572 mean_meta_loss: 5.448598
+[8/15] [3300/3437] mean_loss: 5.824757 mean_meta_loss: 5.407913
+*** Epoch=7, Last Update=6, Dev Loss=6.333095, Dev Acc=0.783971, Dev Turn Acc=0.907920, Best Loss=6.333095, Best Acc=0.784920 ***
+*** Epoch=7, Last Update=6, Tes Loss=6.534262, Tes Acc=0.763301, Tes Turn Acc=0.903773, Best Loss=6.333095, Best Acc=0.784920 ***
+[9/15] [0/3437] mean_loss: 5.361272 mean_meta_loss: 5.575076
+[9/15] [300/3437] mean_loss: 5.865905 mean_meta_loss: 5.360427
+[9/15] [600/3437] mean_loss: 5.708931 mean_meta_loss: 5.296348
+[9/15] [900/3437] mean_loss: 5.720205 mean_meta_loss: 5.337463
+[9/15] [1200/3437] mean_loss: 5.731894 mean_meta_loss: 5.318167
+[9/15] [1500/3437] mean_loss: 5.691393 mean_meta_loss: 5.239530
+[9/15] [1800/3437] mean_loss: 5.670851 mean_meta_loss: 5.259439
+[9/15] [2100/3437] mean_loss: 5.712361 mean_meta_loss: 5.284072
+[9/15] [2400/3437] mean_loss: 5.755756 mean_meta_loss: 5.319991
+[9/15] [2700/3437] mean_loss: 5.727573 mean_meta_loss: 5.296340
+[9/15] [3000/3437] mean_loss: 5.751404 mean_meta_loss: 5.350537
+[9/15] [3300/3437] mean_loss: 5.738067 mean_meta_loss: 5.304894
+*** Epoch=8, Last Update=8, Dev Loss=6.248020, Dev Acc=0.792107, Dev Turn Acc=0.915107, Best Loss=6.248020, Best Acc=0.792107 ***
+*** Epoch=8, Last Update=8, Tes Loss=6.526479, Tes Acc=0.756515, Tes Turn Acc=0.906080, Best Loss=6.248020, Best Acc=0.792107 ***
+[10/15] [0/3437] mean_loss: 5.026106 mean_meta_loss: 4.994815
+[10/15] [300/3437] mean_loss: 5.690305 mean_meta_loss: 5.323483
+[10/15] [600/3437] mean_loss: 5.695467 mean_meta_loss: 5.290232
+[10/15] [900/3437] mean_loss: 5.666116 mean_meta_loss: 5.237252
+[10/15] [1200/3437] mean_loss: 5.689511 mean_meta_loss: 5.429080
+[10/15] [1500/3437] mean_loss: 5.693788 mean_meta_loss: 5.298162
+[10/15] [1800/3437] mean_loss: 5.618763 mean_meta_loss: 5.233695
+[10/15] [2100/3437] mean_loss: 5.686677 mean_meta_loss: 5.341080
+[10/15] [2400/3437] mean_loss: 5.682806 mean_meta_loss: 5.281087
+[10/15] [2700/3437] mean_loss: 5.626687 mean_meta_loss: 5.180652
+[10/15] [3000/3437] mean_loss: 5.639017 mean_meta_loss: 5.261396
+[10/15] [3300/3437] mean_loss: 5.607070 mean_meta_loss: 5.296971
+*** Epoch=9, Last Update=8, Dev Loss=6.288876, Dev Acc=0.789260, Dev Turn Acc=0.913344, Best Loss=6.248020, Best Acc=0.792107 ***
+*** Epoch=9, Last Update=8, Tes Loss=6.549532, Tes Acc=0.757193, Tes Turn Acc=0.902416, Best Loss=6.248020, Best Acc=0.792107 ***
+[11/15] [0/3437] mean_loss: 5.953907 mean_meta_loss: 5.628206
+[11/15] [300/3437] mean_loss: 5.612109 mean_meta_loss: 5.212226
+[11/15] [600/3437] mean_loss: 5.620645 mean_meta_loss: 5.271108
+[11/15] [900/3437] mean_loss: 5.578658 mean_meta_loss: 5.224411
+[11/15] [1200/3437] mean_loss: 5.655553 mean_meta_loss: 5.188628
+[11/15] [1500/3437] mean_loss: 5.581801 mean_meta_loss: 5.279819
+[11/15] [1800/3437] mean_loss: 5.611023 mean_meta_loss: 5.246291
+[11/15] [2100/3437] mean_loss: 5.540862 mean_meta_loss: 5.128494
+[11/15] [2400/3437] mean_loss: 5.564452 mean_meta_loss: 5.295556
+[11/15] [2700/3437] mean_loss: 5.526159 mean_meta_loss: 5.232861
+[11/15] [3000/3437] mean_loss: 5.552304 mean_meta_loss: 5.172270
+[11/15] [3300/3437] mean_loss: 5.591118 mean_meta_loss: 5.280202
+*** Epoch=10, Last Update=10, Dev Loss=6.170671, Dev Acc=0.806211, Dev Turn Acc=0.919582, Best Loss=6.170671, Best Acc=0.806211 ***
+*** Epoch=10, Last Update=10, Tes Loss=6.279124, Tes Acc=0.786781, Tes Turn Acc=0.913545, Best Loss=6.170671, Best Acc=0.806211 ***
+[12/15] [0/3437] mean_loss: 5.626128 mean_meta_loss: 4.799111
+[12/15] [300/3437] mean_loss: 5.491192 mean_meta_loss: 5.230713
+[12/15] [600/3437] mean_loss: 5.471344 mean_meta_loss: 5.235215
+[12/15] [900/3437] mean_loss: 5.565544 mean_meta_loss: 5.200113
+[12/15] [1200/3437] mean_loss: 5.505336 mean_meta_loss: 5.219231
+[12/15] [1500/3437] mean_loss: 5.513033 mean_meta_loss: 5.179778
+[12/15] [1800/3437] mean_loss: 5.537439 mean_meta_loss: 5.192157
+[12/15] [2100/3437] mean_loss: 5.500088 mean_meta_loss: 5.229761
+[12/15] [2400/3437] mean_loss: 5.540645 mean_meta_loss: 5.183907
+[12/15] [2700/3437] mean_loss: 5.532809 mean_meta_loss: 5.218898
+[12/15] [3000/3437] mean_loss: 5.495370 mean_meta_loss: 5.177745
+[12/15] [3300/3437] mean_loss: 5.474952 mean_meta_loss: 5.104943
+*** Epoch=11, Last Update=11, Dev Loss=6.023886, Dev Acc=0.820721, Dev Turn Acc=0.926227, Best Loss=6.023886, Best Acc=0.820721 ***
+*** Epoch=11, Last Update=11, Tes Loss=6.173764, Tes Acc=0.796553, Tes Turn Acc=0.915174, Best Loss=6.023886, Best Acc=0.820721 ***
+[13/15] [0/3437] mean_loss: 4.417931 mean_meta_loss: 5.472334
+[13/15] [300/3437] mean_loss: 5.467497 mean_meta_loss: 5.155107
+[13/15] [600/3437] mean_loss: 5.446945 mean_meta_loss: 5.173956
+[13/15] [900/3437] mean_loss: 5.434829 mean_meta_loss: 5.164075
+[13/15] [1200/3437] mean_loss: 5.451486 mean_meta_loss: 5.153673
+[13/15] [1500/3437] mean_loss: 5.462040 mean_meta_loss: 5.182878
+[13/15] [1800/3437] mean_loss: 5.466173 mean_meta_loss: 5.156870
+[13/15] [2100/3437] mean_loss: 5.452985 mean_meta_loss: 5.139868
+[13/15] [2400/3437] mean_loss: 5.506262 mean_meta_loss: 5.173016
+[13/15] [2700/3437] mean_loss: 5.469433 mean_meta_loss: 5.155246
+[13/15] [3000/3437] mean_loss: 5.457271 mean_meta_loss: 5.154749
+[13/15] [3300/3437] mean_loss: 5.483477 mean_meta_loss: 5.179728
+*** Epoch=12, Last Update=11, Dev Loss=6.111516, Dev Acc=0.809059, Dev Turn Acc=0.922023, Best Loss=6.023886, Best Acc=0.820721 ***
+*** Epoch=12, Last Update=11, Tes Loss=6.176550, Tes Acc=0.791260, Tes Turn Acc=0.918295, Best Loss=6.023886, Best Acc=0.820721 ***
+[14/15] [0/3437] mean_loss: 5.010448 mean_meta_loss: 5.354481
+[14/15] [300/3437] mean_loss: 5.424442 mean_meta_loss: 5.186707
+[14/15] [600/3437] mean_loss: 5.380123 mean_meta_loss: 5.150647
+[14/15] [900/3437] mean_loss: 5.388979 mean_meta_loss: 5.117459
+[14/15] [1200/3437] mean_loss: 5.401822 mean_meta_loss: 5.173695
+[14/15] [1500/3437] mean_loss: 5.382508 mean_meta_loss: 5.173672
+[14/15] [1800/3437] mean_loss: 5.423653 mean_meta_loss: 5.128648
+[14/15] [2100/3437] mean_loss: 5.389274 mean_meta_loss: 5.178470
+[14/15] [2400/3437] mean_loss: 5.416605 mean_meta_loss: 5.110479
+[14/15] [2700/3437] mean_loss: 5.414063 mean_meta_loss: 5.136219
+[14/15] [3000/3437] mean_loss: 5.438338 mean_meta_loss: 5.152933
+[14/15] [3300/3437] mean_loss: 5.450211 mean_meta_loss: 5.091862
+*** Epoch=13, Last Update=13, Dev Loss=6.001398, Dev Acc=0.821400, Dev Turn Acc=0.927448, Best Loss=6.001398, Best Acc=0.821400 ***
+*** Epoch=13, Last Update=13, Tes Loss=6.125288, Tes Acc=0.808768, Tes Turn Acc=0.923588, Best Loss=6.001398, Best Acc=0.821400 ***
+[15/15] [0/3437] mean_loss: 5.816775 mean_meta_loss: 5.677279
+[15/15] [300/3437] mean_loss: 5.406011 mean_meta_loss: 5.063294
+[15/15] [600/3437] mean_loss: 5.367897 mean_meta_loss: 5.174554
+[15/15] [900/3437] mean_loss: 5.368859 mean_meta_loss: 5.107123
+[15/15] [1200/3437] mean_loss: 5.377476 mean_meta_loss: 5.063348
+[15/15] [1500/3437] mean_loss: 5.373064 mean_meta_loss: 5.188942
+[15/15] [1800/3437] mean_loss: 5.370347 mean_meta_loss: 5.109503
+[15/15] [2100/3437] mean_loss: 5.325953 mean_meta_loss: 5.070696
+[15/15] [2400/3437] mean_loss: 5.368212 mean_meta_loss: 5.122515
+[15/15] [2700/3437] mean_loss: 5.342121 mean_meta_loss: 5.140359
+[15/15] [3000/3437] mean_loss: 5.448629 mean_meta_loss: 5.081246
+[15/15] [3300/3437] mean_loss: 5.359878 mean_meta_loss: 5.100124
+*** Epoch=14, Last Update=14, Dev Loss=5.925560, Dev Acc=0.830350, Dev Turn Acc=0.931923, Best Loss=5.925560, Best Acc=0.830350 ***
+*** Epoch=14, Last Update=14, Tes Loss=6.115082, Tes Acc=0.801031, Tes Turn Acc=0.920195, Best Loss=5.925560, Best Acc=0.830350 ***
+Results based on best acc: 
+{'epoch': 1, 'loss': 6.1150819492586015, 'joint_acc': 0.8010314875135722, 'joint_turn_acc': 0.9201954397394136, 'slot_acc': array([0.99579262, 0.9803203 , 0.99063518, 0.99131379, 0.99932139,
+       0.99782845, 0.99904995, 0.99484256, 0.98669924, 0.99619978,
+       0.9932139 , 0.99647123, 0.95534745, 0.99226384, 0.99742128,
+       0.99687839, 0.99579262, 0.98602063, 0.9852063 , 0.99185668,
+       0.99674267, 0.9895494 , 0.98792074, 0.9907709 , 0.99253529,
+       0.99416395, 0.99823561, 0.99742128, 0.99429967, 0.98330619]), 'ave_slot_acc': 0.9915807093738691}
+Namespace(attn_head=4, data_dir='data/mwz2.4', dec_lr=0.0001, dec_warmup=0.1, dev_data='dev_dials_v2.json', do_train=False, dropout_prob=0.1, enc_lr=4e-05, enc_warmup=0.1, eval_epoch=1, eval_step=100000, max_seq_length=512, meta_batch_size=8, n_epochs=15, num_history=20, num_self_attention_layer=6, patience=6, pretrained_model='bert-base-uncased', random_seed=42, save_dir='output-meta24-v1/exp-sd42-bz16-8-lr4e-05-0.0001-1e-05-ep15', test_data='dev_dials_v2.json', torch_version='1.11.0', train_batch_size=16, train_data='train_dials_v2.json', transformers_version='4.17.0', wnet_hidden_size=768, wnet_lr=1e-05, wnet_warmup=0.1, word_dropout=0.1)
+device: cuda
+['attraction-area', 'attraction-name', 'attraction-type', 'hotel-area', 'hotel-book day', 'hotel-book people', 'hotel-book stay', 'hotel-internet', 'hotel-name', 'hotel-parking', 'hotel-pricerange', 'hotel-stars', 'hotel-type', 'restaurant-area', 'restaurant-book day', 'restaurant-book people', 'restaurant-book time', 'restaurant-food', 'restaurant-name', 'restaurant-pricerange', 'taxi-arriveby', 'taxi-departure', 'taxi-destination', 'taxi-leaveat', 'train-arriveby', 'train-book people', 'train-day', 'train-departure', 'train-destination', 'train-leaveat']
+Data loaded!
+Results based on best acc: 
+{'epoch': 1, 'loss': 5.925559503067985, 'joint_acc': 0.8303498779495525, 'joint_turn_acc': 0.9319229726064551, 'slot_acc': array([0.99660971, 0.98345538, 0.99471115, 0.99471115, 0.99837266,
+       0.99783021, 0.99810144, 0.99742338, 0.98738812, 0.99552482,
+       0.99159208, 0.9976946 , 0.96311364, 0.99457554, 0.99796583,
+       0.9976946 , 0.99593165, 0.98779496, 0.98440467, 0.99810144,
+       0.99566043, 0.99254136, 0.99010035, 0.99159208, 0.99484676,
+       0.99579604, 0.99688093, 0.99864388, 0.99864388, 0.98196366]), 'ave_slot_acc': 0.9929888798481151}

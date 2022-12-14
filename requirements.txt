@@ -1,0 +1,2 @@
+Pytorch=1.11.0
+Transformers=4.17.0
